@@ -1,0 +1,33 @@
+https://stackoverflow.com/questions/494721/what-are-some-good-resources-for-writing-a-chess-engine
+[IMP Resource]web.archive.org/web/20070607231311/http://www.brucemo.com/compchess/programming/index.htm
+https://www.chessprogramming.org/Main_Page
+Articles on C++ implementation of chess engine
+https://www.gamedev.net/tutorials/_/technical/artificial-intelligence/chess-programming-part-i-getting-started-r1014/
+Part1:
+https://www.linkedin.com/pulse/writing-simple-chess-engine-c-baran-can-%C3%B6ner-cfa/
+Part2:
+https://hbr.org/2017/04/why-you-should-have-at-least-two-careers-utm_medium=social&utm_source=facebook&utm_campaign=hbr
+https://home.hccnet.nl/h.g.muller/max-src2.html
+
+Useful Github Repos:
+Stockfish :https://github.com/mcostalba/Stockfish/
+https://github.com/RomainGoussault/Deepov
+https://github.com/BaranCanOener/Pugs-versus-Bears - not used bitboard
+https://github.com/QueensGambit/CrazyAra/tree/master/engine/src
+
+GUI for engine:
+https://www.wxwidgets.org/  
+/*Description: wxWidgets is a C++ library that lets developers create applications for Windows, macOS, Linux and other platforms with a single code base.*/
+Tutorial for wxWidgets: https://www.youtube.com/watch?v=FOIbK4bJKS8
+
+GUI Description:The process of implementing a GUI is not very simple.However, the basic principle is still pretty intuitive: Create objects representing UI elements and then define event handlers for them.
+
+Initial Caveats on Representation of the Board and its Pieces
+
+The board representation is the principal prerequisite of any engine. How do you encode the chess board and it's pieces? The answer to these questions dictates how moves are generated and executed, and hence massively influences the performance of any engine (which has to cycle through millions of moves to find one it deems optimal).
+
+Now, modern, strong engines use bitboards, which essentially represents the board as a set of 64-bit integers (8x8 bits), where a "1" would indicate that a piece is present, and a "0" would indicate the opposite. Move generation and execution can hence be handled via sequences of extremely fast bitwise operations (AND, OR, NOT, XOR, et cetera) which are executed within the CPU registers directly, requiring few clock cycles and low memory delays. The goal is to minimize the clock cycles per move and hence maximize the considered moves per second. Several grid based games are amenable to this approach, Connect 4 being one example I may cover at another time.
+
+
+VS49 project:Bloom filter and Cuckoo filter on N-ary trees
+YSS ukkonen's algorithm
