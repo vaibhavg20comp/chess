@@ -2,7 +2,8 @@
 A chess program written in C  using MinMax algorithm that can be played on the command line.
 
 ## Features:
-* Single-Player(Playing against the computer) and Dual Player Mode
+* Single-Player(Playing against the computer) and Dual Player Mode.
+* Supports Forsyth Edwards Format for storing board position FEN is a format which stores the state of the chessboard as a string.
 * We can choose the hardness level although requires good computing power for a hard(depth 8) level.
 * Can detect en passant square if there exists one.
 * Checks for the 50 move rule
@@ -13,7 +14,7 @@ A chess program written in C  using MinMax algorithm that can be played on the c
 ## Getting Started
  * First clone the repo using command below:
   ```
-   git clone <REPO_URL>
+   git clone https://github.com/vaibhavg20comp/chess.git
   ```
  * Run the file ChessJedi.c using command:
  ```
@@ -28,8 +29,18 @@ A chess program written in C  using MinMax algorithm that can be played on the c
    Eg. 'e2e4' will move the piece(intitially pawn) from square e2 to square e4.
  * In case you want to search the best move by going into a certain depth you can press 's'. 
  * To takeback a move press 't'.
+  <p align="center">
+    <img src="chessJedi.gif" alt="" />
+  </p>
  * Enjoy!!
 
+
+## FutureScope
+* Adding GUI to the engine
+* Adding a provision to save the current game.
+* Adding timer to the gameplay and other modes like Bullet , Classic etc.
+* Add some book moves(sort of lookup table) in the game to allow faster response to certain move patterns.
+* Variable tree depth- when situation is dynamic(king in check or exchange going on).
 ## Some Amazing Resources 
 
 * https://www.linkedin.com/pulse/writing-simple-chess-engine-c-baran-can-%C3%B6ner-cfa/
